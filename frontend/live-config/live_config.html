@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Live Config — RO → EN</title>
+<link rel="stylesheet" href="live_config.css" />
+</head>
+<body>
+  <main class="console">
+    <header class="console-head">
+      <h1>Traducere live RO → EN</h1>
+      <p class="hint">
+        Din motive de securitate ale browserului, Twitch nu permite acestui
+        tab să acceseze microfonul direct. Ascultarea propriu-zisă se face
+        într-o fereastră separată, normală — vezi mai jos.
+      </p>
+    </header>
+
+    <section class="field-group">
+      <label class="field">
+        <span>1. URL-ul EBS-ului tău</span>
+        <input id="ebsUrl" type="text" placeholder="https://exemplu-ebs.onrender.com" />
+      </label>
+
+      <label class="field">
+        <span>2. Tokenul tău (se reînnoiește singur cât ții tab-ul deschis)</span>
+        <input id="token" type="text" readonly />
+      </label>
+      <div class="row-actions">
+        <button id="copyBtn" class="copy-btn">Copiază tokenul</button>
+        <span id="copyStatus" class="copy-status"></span>
+      </div>
+
+      <button id="openBtn" class="open-btn" disabled>
+        3. Deschide consola de ascultare ↗
+      </button>
+    </section>
+
+    <section class="errors">
+      <p id="error" class="error hidden"></p>
+    </section>
+  </main>
+
+  <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+  <script src="live_config.js"></script>
+</body>
+</html>

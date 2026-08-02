@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Setări subtitrări RO→EN</title>
+<link rel="stylesheet" href="config.css" />
+</head>
+<body>
+  <main class="panel">
+    <h1>Subtitrări RO → EN</h1>
+    <p class="hint">
+      Aceste setări controlează cum arată subtitrările pentru viewerii tăi.
+      Ca să pornești efectiv traducerea live, deschide tab-ul
+      <strong>Live Config</strong> din dashboard-ul de streamer în timp ce
+      ești live.
+    </p>
+
+    <label class="field">
+      <span>Poziție</span>
+      <select id="position">
+        <option value="bottom">Jos</option>
+        <option value="top">Sus</option>
+      </select>
+    </label>
+
+    <label class="field">
+      <span>Mărime text</span>
+      <select id="fontSize">
+        <option value="small">Mică</option>
+        <option value="medium" selected>Medie</option>
+        <option value="large">Mare</option>
+      </select>
+    </label>
+
+    <button id="save" class="save-btn">Salvează setările</button>
+    <p id="status" class="status" role="status"></p>
+  </main>
+
+  <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+  <script src="config.js"></script>
+</body>
+</html>

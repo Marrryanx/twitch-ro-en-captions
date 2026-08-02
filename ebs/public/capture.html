@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Consolă de ascultare — RO → EN</title>
+<link rel="stylesheet" href="capture.css" />
+</head>
+<body>
+  <main class="console">
+    <header class="console-head">
+      <h1><span class="dot" id="dot"></span>Consolă de ascultare RO → EN</h1>
+      <p class="hint">
+        Ține acest tab deschis, normal, într-o fereastră de browser (nu în
+        Twitch) cât timp ești live. Are nevoie de microfon și funcționează
+        doar în Chrome / Edge (Web Speech API).
+      </p>
+    </header>
+
+    <section class="token-config">
+      <label class="field">
+        <span>Token de autorizare</span>
+        <input id="token" type="text" placeholder="Lipește aici tokenul copiat din Live Config" />
+      </label>
+      <p class="hint small">
+        Îl găsești în tab-ul <strong>Live Config</strong> al extensiei, din
+        Creator Dashboard, cât ești live. Dacă streamul ține mult, tokenul
+        poate expira — dacă vezi eroare de autorizare, întoarce-te acolo,
+        copiază unul nou și lipește-l aici.
+      </p>
+    </section>
+
+    <section class="controls">
+      <button id="toggle" class="toggle-btn">Pornește ascultarea</button>
+      <span id="statusText" class="status-text">Oprit</span>
+    </section>
+
+    <section class="transcript">
+      <h2>Transcript live</h2>
+      <div id="log" class="log"></div>
+    </section>
+
+    <section class="errors">
+      <p id="error" class="error hidden"></p>
+    </section>
+  </main>
+
+  <script src="capture.js"></script>
+</body>
+</html>
